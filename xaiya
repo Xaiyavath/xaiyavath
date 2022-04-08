@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            display: flex;  
+            flex-flow: row wrap;
+            font-weight: bold;
+            text-align: center; 
+          }
+
+          .wrapper > * {
+            padding: 10px;
+            flex: 1 100%;
+          }
+
+          .header {
+            background: tomato;
+            justify-content: space-between;
+            display: flex;
+            flex-flow: row;
+          }
+
+          .footer {
+            background: lightgreen;
+          }
+          .aside-2 {
+            background: hotpink;
+          }
+
+          @media all and (min-width: 600px) {
+            .aside { flex: 1 0 0; }
+          }
+
+          @media all and (min-width: 800px) {
+            .main    { flex: 3 0px; }
+            .aside-1 { order: 1; } 
+            .main    { order: 2; }
+            .aside-2 { order: 3; }
+            .footer  { order: 4; }
+          }
+
+          body {
+            padding: 2em; 
+          }
+          .contactinfo{
+            display: flex;
+            flex-flow: row;
+            list-style: none;
+          }
+          .contactinfoB{
+            display: flex;
+            flex-flow: row;
+            list-style: none;
+          }
+
+        form {
+          display: flex;
+          flex-wrap: wrap;
+          width: 85%;
+          margin: 0 auto;
+        }
+
+        input[type="search"] {
+          border: none;
+        
+          border-radius: 5px 5px 5px 5px;
+          background: #E9E9E9;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          padding: 0.35em 0.75em;
+          border: none;
+          font-size: 1.1em;
+          text-decoration: none;
+          line-height: normal;
+          max-height: 3em;
+          
+          flex: 2 0 250px;
+        }
+
+        input[type="search"]:focus {
+          background: Thistle;
+          color: white;
+          letter-spacing: .1em;
+          transition: background 400ms ease-in-out;
+          outline: none;
+        }
+
+        button {
+          flex: 1 0 90px;
+          
+          max-height: 3em;
+          font-size: 1.1em;
+          letter-spacing: .2em;
+          text-transform: uppercase;
+          border-radius: 0px 5px 5px 0px;
+          background: silver;
+          color: white;
+          border: none;
+          padding: 0.35em 0.75em;
+          cursor: pointer;
+
+        }
+        button:hover {
+          background: skyblue;
+        }
+
+        @media (max-width: 450px) {
+          body {
+            width: 100%;
+          }
+          
+          html, body {
+            margin: 0;
+            padding: 0;
+          }
+        }
+        .navigation{
+          display: flex;
+          flex-flow: row;
+          list-style: none;
+        }
+        .A{
+          list-style: none;
+        }
+
+    </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <ul class="contactinfo">
+        <li><a href="#">Kênh người bán</a></li>
+        <li><a href="#">Tài ứng dựng</a></li>
+        <li><a href="#">Kết nối</a></li>
+      </ul>
+      <ul class="contactinfoB">
+        <li><a href="#">Thông báo</a></li>
+        <li><a href="#">Hỗ trợ</a></li>
+        <li><a href="#">Tiếng việt</a></li>
+      </ul>
+      <div>
+        <form>
+          <input type="search" name="search" />
+          <button type="submit">Search</button> 
+        </form>
+      </div>
+    </header>
+    <article class="main">
+      <ul class="navigation">
+        <li><a href="#">Tất cả</a></li>
+        <li><a href="#">Chờ xác nhận</a></li>
+        <li><a href="#">Chờ lấy hàng</a></li>
+        <li><a href="#">Đang giao</a></li>
+        <li><a href="#">Đã giao</a></li>
+        <li><a href="#">Đã hủy</a></li>
+      </ul> 
+    </article>
+    <aside class="aside aside-1">
+      <ul class="A">
+        <li><a href="#">Tài khoản của tôi</a></li>
+        <li><a href="#">Đơn mua</a></li>
+        <li><a href="#">Thông báo</a></li>
+        <li><a href="#">Kho Voucher</a></li>
+        <li><a href="#">Shoppee Xu</a></li>
+      </ul>
+    </aside>
+    <footer class="footer">Footer</footer>
+  </div>
+</body>
+</html>
