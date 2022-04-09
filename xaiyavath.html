@@ -19,14 +19,15 @@
           }
 
           .header {
-            background: tomato;
+            background: #ee4d2d;
             justify-content: space-between;
             display: flex;
             flex-flow: row;
           }
 
           .footer {
-            background: lightgreen;
+            background: #ee4d2d;
+            color: white;
           }
           .aside-2 {
             background: hotpink;
@@ -52,10 +53,24 @@
             flex-flow: row;
             list-style: none;
           }
+          .contactinfo a{
+            color: white;
+            padding: 0.5rem;
+            text-decoration: none;
+          }
           .contactinfoB{
             display: flex;
             flex-flow: row;
             list-style: none;
+          }
+          .contactinfoB a{
+            color: white;
+            padding: 0.5rem;
+            text-decoration: none;
+          }
+          .search {
+            display: flex;
+            flex-flow: column;
           }
 
         form {
@@ -93,13 +108,12 @@
 
         button {
           flex: 1 0 90px;
-          
           max-height: 3em;
           font-size: 1.1em;
           letter-spacing: .2em;
           text-transform: uppercase;
           border-radius: 0px 5px 5px 0px;
-          background: silver;
+          background: #ee4d2d;
           color: white;
           border: none;
           padding: 0.35em 0.75em;
@@ -107,7 +121,8 @@
 
         }
         button:hover {
-          background: skyblue;
+          background: white;
+          color: black;
         }
 
         @media (max-width: 450px) {
@@ -125,10 +140,110 @@
           flex-flow: row;
           list-style: none;
         }
+        .navigation a{
+            color: black;
+            padding: 0.5rem;
+            text-decoration: none;
+          }
         .A{
           list-style: none;
         }
-
+        .A a{
+            color: black;
+            padding: 0.5rem;
+            text-decoration: none;
+          }
+          .buttona {
+              background-color: #ee4d2d; /* Green */
+              border: none;
+              color: white;
+              padding: 10px 10px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 8px; 
+              width: 25px;
+              height: 8px;
+            }
+            .buttonb {
+              color: black;
+              padding: 9px 10px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 8px; 
+              width: 30px;
+              height: 6px;
+              margin: 0 0 0 10px;
+              border: 1px black solid;
+              border-radius: 5px;
+            }
+            .shop{
+              display: flex;
+              flex-flow: row;
+              width: auto;
+              text-decoration: none;
+              list-style: none;
+              justify-content: space-between;
+            }
+            .yeu a{
+              display: flex;
+              flex-flow: row;
+              list-style: none;
+              text-decoration: none;
+              color: black;
+              padding: 0 10px 0 0;
+              font-size: 10px;
+              text-align: center;
+            }
+            .content{
+              display: flex;
+              flex-flow: row;
+              justify-content: space-between;
+            }
+            .infoA{
+              display: flex;
+              flex-flow: row;
+            }
+            .infoB{
+              display: flex;
+              flex-flow: row;
+            }
+            .bb{
+              padding-right: 10px;
+            }
+            .btsp{
+              display: flex;
+              flex-flow: row;
+              justify-content: space-between;
+            }
+            .button1 {
+              color: black;
+              padding: 9px 10px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 10px; 
+              width: 100px;
+              height: 6px;
+              margin: 0 0 0 10px;
+              border: 1px black solid;
+              border-radius: 5px;
+            }
+            .button2 {
+              color: black;
+              padding: 9px 10px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 10px; 
+              width: 100px;
+              height: 6px;
+              margin: 0 0 0 10px;
+              border: 1px black solid;
+              border-radius: 5px;
+            }
+            
     </style>
 </head>
 <body>
@@ -144,13 +259,14 @@
         <li><a href="#">Hỗ trợ</a></li>
         <li><a href="#">Tiếng việt</a></li>
       </ul>
-      <div>
-        <form>
-          <input type="search" name="search" />
-          <button type="submit">Search</button> 
-        </form>
-      </div>
+      
     </header>
+    <div class="search">
+      <form>
+        <input type="search" name="search" />
+        <button type="submit">Search</button> 
+      </form>
+    </div>
     <article class="main">
       <ul class="navigation">
         <li><a href="#">Tất cả</a></li>
@@ -160,6 +276,34 @@
         <li><a href="#">Đã giao</a></li>
         <li><a href="#">Đã hủy</a></li>
       </ul> 
+      <div class="shop">
+        <div class="infoA">
+          <h4>Yêu thích</h4>
+          <a href="#" class="buttona">Chat</a>
+          <a href="#" class="buttonb">Xem shop</a>
+        </div>
+        <div class="infoB">
+          <h4 class="bb">Đơn hàng đã được thông quan</h4>
+          <h4 style="color: #ee4d2d;">Đang giao</h4>
+        </div>
+      </div>
+      <div class="content">
+        <div class="product">
+          <img  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png" width="200px" alt="">
+        </div>
+        <div class="ve">
+          <h4>Giá : 100,000 VND</h4>
+        </div>
+      </div>
+      <div class="btsp">
+        <div class="dt">
+          <h5>Nhấn sản phẩm và thanh toán trước 12/04/2022</h5>
+        </div>
+        <div class="btstt">
+          <a href="#" class="button1">Chưa nhận hàng</a>
+          <a href="#" class="button2">Liên hệ người bán</a>
+        </div>
+        </div>
     </article>
     <aside class="aside aside-1">
       <ul class="A">
@@ -170,7 +314,7 @@
         <li><a href="#">Shoppee Xu</a></li>
       </ul>
     </aside>
-    <footer class="footer">Footer</footer>
+    <footer class="footer">Shopee</footer>
   </div>
 </body>
 </html>
